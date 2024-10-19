@@ -1,0 +1,24 @@
+{
+    "name": "inter-invest/client-api-per",
+    "description": "sdk for api per",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "InterInvest\\ClientApiPer\\": "/src"
+        }
+    },
+    "authors": [
+        {
+            "name": "CHABOUR Mourad"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "symfony/http-kernel": "^7.1",
+        "symfony/messenger": "^7.1",
+        "symfony/dependency-injection": "^7.1",
+        "symfony/config": "^7.1",
+        "symfony/serializer": "^7.1"
+    }
+}
