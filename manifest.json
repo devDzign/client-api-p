@@ -1,15 +1,27 @@
 {
-  "bundles": {
-    "InterInvest\\ClientApiPer\\ClientApiPerBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%"
-  },
-  "env": {
-    "MY_CUSTOM_ENV_VAR": "default_value"
-  },
-  "post-install-output": [
-    "Success! Your bundle has been installed.",
-    "Don't forget to configure it in config/packages/your_bundle.yaml."
-  ]
+  "manifests": {
+    "inter-invest/client-api-per": {
+      "manifest": {
+        "bundles": {
+          "InterInvest\\ClientApiPer\\ClientApiPerBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        }
+      },
+      "files": {
+        "config/packages/acme_private.yaml": {
+          "contents": [
+            "acme_private:",
+            "    encode: true",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "c7bbb7daf099a04ce879d1c94791ed6268e5b1d1"
+    }
+  }
 }
