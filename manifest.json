@@ -1,27 +1,15 @@
 {
-  "manifests": {
-    "acme/private-bundle": {
-      "manifest": {
-        "bundles": {
-          "InterInvest\\ClientApiPer\\ClientApiPerBundle": [
-            "all"
-          ]
-        },
-        "copy-from-recipe": {
-          "config/": "%CONFIG_DIR%"
-        }
-      },
-      "files": {
-        "config/packages/acme_private.yaml": {
-          "contents": [
-            "acme_private:",
-            "    encode: true",
-            ""
-          ],
-          "executable": false
-        }
-      },
-      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff00"
-    }
-  }
+  "bundles": {
+    "InterInvest\\ClientApiPer\\ClientApiPerBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%"
+  },
+  "env": {
+    "MY_CUSTOM_ENV_VAR": "default_value"
+  },
+  "post-install-output": [
+    "Success! Your bundle has been installed.",
+    "Don't forget to configure it in config/packages/your_bundle.yaml."
+  ]
 }
