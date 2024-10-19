@@ -1,6 +1,6 @@
 {
   "manifests": {
-    "inter-invest/client-api-per": {
+    "acme/private-bundle": {
       "manifest": {
         "bundles": {
           "InterInvest\\ClientApiPer\\ClientApiPerBundle": [
@@ -21,7 +21,7 @@
           "executable": false
         }
       },
-      "ref": "c7bbb7daf099a04ce879d1c94791ed6268e5b1d1"
+      "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff00"
     }
   }
 }
