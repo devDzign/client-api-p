@@ -3,13 +3,22 @@
     "InterInvest\\ClientApiPer\\ClientApiPerBundle": ["all"]
   },
   "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%"
+    "config/": "%CONFIG_DIR%/",
+    "public/": "%PUBLIC_DIR%/",
+    "src/": "%SRC_DIR%/"
+  },
+  "composer-scripts": {
+    "cache:clear": "symfony-cmd",
+    "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
   },
   "env": {
-    "MY_CUSTOM_ENV_VAR": "default_value"
+    "APP_ENV": "dev",
+    "APP_SECRET": "%generate(secret)%"
   },
-  "post-install-output": [
-    "Success! Your bundle has been installed.",
-    "Don't forget to configure it in config/packages/your_bundle.yaml."
+  "gitignore": [
+    ".env",
+    "/public/bundles/",
+    "/var/",
+    "/vendor/"
   ]
 }
