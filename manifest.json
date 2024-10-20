@@ -3,13 +3,10 @@
     "InterInvest\\ClientApiPer\\ClientApiPerBundle": ["all"]
   },
   "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/",
-    "public/": "%PUBLIC_DIR%/",
-    "src/": "%SRC_DIR%/"
+    "config/": "%CONFIG_DIR%/"
   },
   "composer-scripts": {
-    "cache:clear": "symfony-cmd",
-    "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    "cache:clear": "symfony-cmd"
   },
   "env": {
     "APP_ENV": "dev",
